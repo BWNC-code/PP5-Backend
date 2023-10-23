@@ -6,25 +6,29 @@ from .models import Profile
 from .serializers import ProfileSerializer
 
 
+def get_annotated_profiles():
+    return Profile.objects.annotate(
+        posts_count=Count("owner__post", distinct=True),
+        followers_count=Count("owner__followed", distinct=True),
+        following_count=Count("owner__follower", distinct=True),
+    )
+
+
 class ProfileList(generics.ListAPIView):
     """
     List all profiles.
     No create view as profile creation is handled by django signals.
     """
 
-    queryset = Profile.objects.annotate(
-        posts_count=Count("owner__post", distinct=True),
-        followers_count=Count("owner__followed", distinct=True),
-        following_count=Count("owner__follower", distinct=True),
-    ).order_by("-created_at")
+    queryset = get_annotated_profiles().order_by("-created_at")
     serializer_class = ProfileSerializer
     filter_backends = [
         filters.OrderingFilter,
         DjangoFilterBackend,
     ]
     filterset_fields = [
-        'owner__follower__followed__profile',
-        'owner__followed__owner__profile'
+        'owner__follower__followed__profile',  # Number of followers the user has
+        'owner__followed__owner__profile'      # Number of people the user follows
     ]
     ordering_fields = [
         "posts_count",
@@ -41,9 +45,5 @@ class ProfileDetail(generics.RetrieveUpdateAPIView):
     """
 
     permission_classes = [IsOwnerOrReadOnly]
-    queryset = Profile.objects.annotate(
-        posts_count=Count("owner__post", distinct=True),
-        followers_count=Count("owner__followed", distinct=True),
-        following_count=Count("owner__follower", distinct=True),
-    )
+    queryset = get_annotated_profiles()
     serializer_class = ProfileSerializer
