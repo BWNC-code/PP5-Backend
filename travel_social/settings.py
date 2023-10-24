@@ -61,7 +61,7 @@ DEBUG = "DEV" in os.environ
 
 ALLOWED_HOSTS = [
     "8000-bwnccode-travelsocialpp-j440ubkpad1.ws-eu105.gitpod.io",
-    'travel-social-backend.herokuapp.com',
+    'travel-social-backend-87f0ae7bbbb1.herokuapp.com',
 ]
 
 
