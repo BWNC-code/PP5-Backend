@@ -27,8 +27,6 @@ class PostSerializer(serializers.ModelSerializer):
             "profile_id",
             "profile_image",
             "like_id",
-            "comments_count",
-            "likes_count",
         ]
 
     def validate_image(self, value):
