@@ -20,6 +20,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "owner",
+            'category'
             "created_at",
             "updated_at",
             "title",
