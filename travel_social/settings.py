@@ -61,7 +61,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = "DEV" in os.environ
 
 ALLOWED_HOSTS = [
-    "8000-bwnccode-travelsocialpp-j440ubkpad1.ws-eu105.gitpod.io",
+    "8000-bwnccode-travelsocialpp-b5vv0lvxdxw.ws-eu106.gitpod.io",
     os.environ.get("ALLOWED_HOST"),
 ]
 
