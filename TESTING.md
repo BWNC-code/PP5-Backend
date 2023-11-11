@@ -45,6 +45,10 @@ Automated tests play a crucial role in the development of the Travel Social API.
 - Validation of the follower count and follower list integrity.
 - Tests to ensure proper functionality of the API in scenarios like mutual following and follower retrieval.
 
+### Categories App
+
+- Tests to verify that a category can be created and retrieved
+
 #### Automated Testing Results
 
 ### Manual Testing
