@@ -10,7 +10,7 @@ The Travel Social API adheres to PEP8 standards, ensuring clean and readable cod
 
 ### Overview
 
-Automated tests play a crucial role in the development of the Travel Social API. A suite of tests has been implemented to cover critical functionalities across various apps like profiles, posts, comments, likes, and followers.
+Automated tests play a crucial role in the development of the Travel Social API. A suite of tests has been implemented to cover critical functionalities across the various apps.
 
 ### Test Cases
 
@@ -45,34 +45,36 @@ Automated tests play a crucial role in the development of the Travel Social API.
 - Validation of the follower count and follower list integrity.
 - Tests to ensure proper functionality of the API in scenarios like mutual following and follower retrieval.
 
-### Categories App
+#### Categories App
 
 - Tests to verify that a category can be created and retrieved
 
-#### Automated Testing Results
+### Automated Testing Results
 
-### Manual Testing
+![Testing results](https://res.cloudinary.com/share-the-plate-cloud/image/upload/v1699825559/Screenshot_2023-11-12_214542_gyymlp.png)
 
-#### Profiles
+## Manual Testing
+
+### Profiles
 
 - Verified that user profiles are created and updated correctly.
 - Checked profile data retrieval for accuracy.
 
-#### Posts
+### Posts
 
 - Manually tested post creation, editing, and deletion.
 - Ensured accurate display and sorting of posts in various views.
 
-#### Comments
+### Comments
 
 - Checked adding, editing, and removing comments on posts.
 - Verified the correct association of comments with respective posts.
 
-#### Likes
+### Likes
 
 - Tested liking and unliking posts, and the correct tally of likes.
 
-#### Followers
+### Followers
 
 - Confirmed the functionality of following and unfollowing users.
 - Tested the correct listing of followers and followed users.

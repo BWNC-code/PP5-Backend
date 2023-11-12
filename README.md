@@ -1,8 +1,17 @@
 # TRAVEL SOCIAL (BACKEND)
 
+## Introduction
+
+For more information about this projects frontend, please visit [this link](https://github.com/BWNC-code/Travel-Social-PP5-Frontend)
+
+Travel Social's backend API is a Django REST Framework-based application that serves as the backbone for a React-based frontend. It's designed to handle data management and server-side logic for a social media platform centered around travel.
+
+The Travel Social API powers a dynamic platform where users can share, discover, and engage with travel-related content. It facilitates a range of functionalities for creating, viewing, editing, and deleting posts related to travel experiences, destinations, reviews, and photo stories. Users can craft their own travel posts, enriching them with vivid descriptions, captivating images, and relevant category tags such as adventure, budget travel, or cultural experiences.
+
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Table of Contents](#table-of-contents)
 - [Architecture](#architecture)
   - [Database](#database)
   - [API and Server](#api-and-server)
@@ -21,6 +30,7 @@
   - [Reasons for JSON-Only Responses](#reasons-for-json-only-responses)
   - [Implementation in Django Settings](#implementation-in-django-settings)
 - [Models and Data Structure](#models-and-data-structure)
+  - [Database Design](#database-design)
   - [Profile](#profile)
   - [Post](#post)
   - [Like](#like)
@@ -30,15 +40,16 @@
 - [Features left to implement](#features-left-to-implement)
 - [Technology Used](#technology-used)
 - [Testing](#testing)
+  - [Python Linting](#python-linting)
+  - [Feature Testing](#feature-testing)
 - [Bugs](#bugs)
 - [Deployment](#deployment)
+  - [Forking the Project Repository](#forking-the-project-repository)
+  - [Cloning the Project Repository](#cloning-the-project-repository)
+  - [Remote Deployment](#remote-deployment)
 - [Credits and Acknowledgements](#credits-and-acknowledgements)
 
 [Table of contents generated with markdown-toc](http://ecotrust-canada.github.io/markdown-toc/)
-
-## Introduction
-
-Travel Social's backend API is a Django REST Framework-based application that serves as the backbone for a React-based frontend. It's designed to handle data management and server-side logic for a social media platform centered around travel.
 
 ## Architecture
 
@@ -117,13 +128,13 @@ In the production environment, the "Travel Social" API is configured to respond 
 
 ### Reasons for JSON-Only Responses
 
-**Uniformity and Predictability**: JSON, being the standard data interchange format in modern web applications, provides a uniform structure for responses. This consistency is crucial for the frontend to reliably parse and use the data.
+--Uniformity and Predictability--: JSON, being the standard data interchange format in modern web applications, provides a uniform structure for responses. This consistency is crucial for the frontend to reliably parse and use the data.
 
-**Efficiency**: JSON is lightweight and easy to parse, which is especially beneficial for web applications that need to transmit data quickly over the internet. By sending only JSON data, we reduce the bandwidth usage and improve the performance of our API.
+--Efficiency--: JSON is lightweight and easy to parse, which is especially beneficial for web applications that need to transmit data quickly over the internet. By sending only JSON data, we reduce the bandwidth usage and improve the performance of our API.
 
-**Frontend Compatibility**: Given that our frontend is built with React, which naturally handles JSON, this approach ensures maximum compatibility. React components can seamlessly integrate and manipulate JSON data for rendering and state management.
+--Frontend Compatibility--: Given that our frontend is built with React, which naturally handles JSON, this approach ensures maximum compatibility. React components can seamlessly integrate and manipulate JSON data for rendering and state management.
 
-**Simplicity in Client-Side Processing**: JSON data can be easily consumed by various client-side technologies. By standardizing on JSON, we simplify the client-side processing, as there is no need to handle different data formats.
+--Simplicity in Client-Side Processing--: JSON data can be easily consumed by various client-side technologies. By standardizing on JSON, we simplify the client-side processing, as there is no need to handle different data formats.
 
 ### Implementation in Django Settings
 
@@ -220,16 +231,50 @@ Future enhancements could include more robust filtering options, integration wit
 
 ## Testing
 
-Details about the testing methodologies and tools used to ensure API reliability and performance.
+### Python Linting
+
+All code passed through PEP8 linter (pylint) with no errors
+
+### Feature Testing
+
+All test cases can be found in [TESTING.md](./TESTING.md)
 
 ## Bugs
 
-A log of known issues and bugs, along with their current status.
+No known bugs remaining
 
 ## Deployment
 
-Instructions for deploying the backend API, including required environment setup and deployment best practices.
+The project was deployed to Heroku. To deploy, please follow the process below:
+
+### Forking the Project Repository
+
+You can create your own independent version of this project by forking the repository. This allows you to experiment and make changes without impacting the original codebase. Here's how to fork the repository:
+
+1. Sign in to your GitHub account and navigate to the repository.
+2. Look for the 'Fork' button at the top right corner of the page and click on it. This action creates a personal copy of the repository in your GitHub account.
+
+### Cloning the Project Repository
+
+Cloning the repository creates a local copy on your machine, maintaining a connection with the original GitHub repository. This enables you to sync your local version with any updates made in the original project. To clone the repository, follow these steps:
+
+1. In your forked repository, click the 'Code' button.
+2. From the dropdown, choose the method of cloning you prefer (HTTPS, SSH, or GitHub CLI), and copy the provided URL.
+3. Open your terminal, navigate to the directory where you want to clone the repository, and run git clone followed by the copied URL.
+4. By forking and cloning the repository, you can freely experiment with the code and even contribute to the original project through pull requests.
+
+### Remote Deployment
+
+To deploy the application on Heroku and ensure that all features work as expected, follow these steps:
+
+- Create a new Heroku app.
+
+- Set up the necessary Config Vars in the Settings tab.
+
+- Connect your GitHub account and select the repository to be deployed.
+
+- Choose either manual deployment or enable automatic deployment.
 
 ## Credits and Acknowledgements
 
-Acknowledgement of any third-party tools, libraries, or frameworks used in the development of the backend.
+Thanks to my mentors, Jubril Akolade and Chris Quinn for their advice and guidance. Thanks as well to the Code Institute team and tutors for their support.
