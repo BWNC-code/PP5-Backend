@@ -14,6 +14,7 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     comments_count = serializers.ReadOnlyField()
     likes_count = serializers.ReadOnlyField()
+    category_name = serializers.ReadOnlyField(source="category.name")
 
     class Meta:
         model = Post
@@ -21,6 +22,7 @@ class PostSerializer(serializers.ModelSerializer):
             "id",
             "owner",
             "category",
+            "category_name",
             "created_at",
             "updated_at",
             "title",
