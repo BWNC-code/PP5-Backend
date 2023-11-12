@@ -39,11 +39,16 @@ class PostSerializer(serializers.ModelSerializer):
     def validate_image(self, value):
         errors = []
 
-        if value.size > 1024 * 1024 * MAX_IMAGE_SIZE_MB:
+        # Check if the image is not provided
+        if value is None:
+            errors.append("No image provided. Please upload an image.")
+
+        # Continue with other checks only if an image is provided
+        elif value.size > 1024 * 1024 * MAX_IMAGE_SIZE_MB:
             errors.append(f"Image size greater than {MAX_IMAGE_SIZE_MB}MB!")
-        if value.image.width > MAX_DIMENSION:
+        elif value.image.width > MAX_DIMENSION:
             errors.append(f"Image width greater than {MAX_DIMENSION}px")
-        if value.image.height > MAX_DIMENSION:
+        elif value.image.height > MAX_DIMENSION:
             errors.append(f"Image height greater than {MAX_DIMENSION}px")
 
         if errors:
