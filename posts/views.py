@@ -27,6 +27,7 @@ class PostList(generics.ListCreateAPIView):
         "owner__followed__owner__profile",  # Posts of users followed by the current user
         "likes__owner__profile",  # Posts liked by the current user
         "owner__profile",  # Posts of the current user
+        "category",
     ]
     search_fields = [
         "owner__username",
