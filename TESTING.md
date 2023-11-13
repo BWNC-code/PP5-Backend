@@ -1,5 +1,29 @@
 # Travel Social API Testing Documentation
 
+## Table of Contents
+
+- [Travel Social API Testing Documentation](#travel-social-api-testing-documentation)
+  - [Code Validation](#code-validation)
+    - [PEP8 Compliance](#pep8-compliance)
+  - [Automated Testing](#automated-testing)
+    - [Overview](#overview)
+    - [Test Cases](#test-cases)
+      - [Profiles App](#profiles-app)
+      - [Posts App](#posts-app)
+      - [Comments App](#comments-app)
+      - [Likes App](#likes-app)
+      - [Followers App](#followers-app)
+      - [Categories App](#categories-app)
+    - [Automated Testing Results](#automated-testing-results)
+  - [Manual Testing](#manual-testing)
+    - [Profiles](#profiles)
+    - [Posts](#posts)
+    - [Comments](#comments)
+    - [Likes](#likes)
+    - [Followers](#followers)
+
+[Table of contents generated with markdown-toc](http://ecotrust-canada.github.io/markdown-toc/)
+
 ## Code Validation
 
 ### PEP8 Compliance
