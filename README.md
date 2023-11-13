@@ -277,4 +277,4 @@ To deploy the application on Heroku and ensure that all features work as expecte
 
 ## Credits and Acknowledgements
 
-Thanks to my mentors, Jubril Akolade and Chris Quinn for their advice and guidance. Thanks as well to the Code Institute team and tutors for their support.
+Thanks to my mentors, Jubril Akolade and Chris Quinn for their advice and guidance. Thanks as well to the Code Institute team and tutors for their support, the drf project CodeInstitute provides was a guide and starting off point for this part of my project.
